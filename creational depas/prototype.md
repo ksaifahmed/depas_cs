@@ -96,7 +96,7 @@ public class PrototypeRegistry{
 
 _The Driver Code AKA **Client**_
 ```csharp
-class HelloWorld {
+public class HelloWorld {
   static void Main() {
     Button b = new Button(10,40, "red");
     Console.WriteLine(b);

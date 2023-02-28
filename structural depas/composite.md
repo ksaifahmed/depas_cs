@@ -20,6 +20,9 @@ A Composite Pattern says that just **allow clients to operate in generic manner 
 
 _The base interface **IGraphic**_
 ```csharp
+using System;
+using System.Collections.Generic;
+
 public interface IGraphic
 {
     void Move(int x, int y);
@@ -31,7 +34,7 @@ _The concrete class **Dot** to use as composites_
 ```csharp
 public class Dot : IGraphic
 {
-    private int x, y;
+    protected int x, y;
 
     public Dot(int x, int y)
     {
@@ -45,9 +48,9 @@ public class Dot : IGraphic
         this.y += y;
     }
 
-    public void Draw()
+    public virtual void Draw()
     {
-        // Draw a dot at X and Y.
+        Console.WriteLine("Drawing a Dot at {0}, {1}", x, y);
     }
 }
 ```
@@ -65,7 +68,7 @@ public class Circle : Dot
 
     public override void Draw()
     {
-        // Draw a circle at X and Y with radius R.
+        Console.WriteLine("Drawing a Circle with radius {0}, at ({1},{2})", radius, base.x, base.y);
     }
 }
 ```
@@ -106,7 +109,7 @@ public class CompoundGraphic : IGraphic
 
 _The Driver Code AKA **Client** (ImageEditor)_
 ```csharp
-class HelloWorld {
+public class HelloWorld {
     static void Main(string[] args)
     {
         CompoundGraphic innerRing = new CompoundGraphic();

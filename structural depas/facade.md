@@ -68,7 +68,7 @@ class Facade
 
 _The Driver Code AKA **Client**_
 ```csharp
-class HelloWorld {
+public class HelloWorld {
     static void Main(string[] args)
     {
         Facade facade = new Facade();

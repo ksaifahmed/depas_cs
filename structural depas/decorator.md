@@ -131,7 +131,7 @@ public class FacebookNotifier : NotifierDecorator
 
 _The Driver Code AKA **Client**_
 ```csharp
-class HelloWorld {
+public class HelloWorld {
     static void Main(string[] args)
     {
         var emailNotifier = new EmailNotifier(new List<string> {"john@example.com", "jane@example.com"});
