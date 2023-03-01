@@ -50,7 +50,7 @@ While there may be some overlap in what structural and behavioral patterns can a
 
 Structural patterns deal with the composition of classes and objects to form larger structures. They describe how objects and classes can be combined to form new structures and provide mechanisms to manage the relationships between them. 
 
-> ### _Behavioral Patterns_
+### _Behavioral Patterns_
 
 Behavioral patterns deal with the communication between objects and classes. They describe how objects interact with one another and provide mechanisms for controlling that interaction. 
 
